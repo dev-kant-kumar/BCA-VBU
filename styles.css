@@ -83,23 +83,33 @@ footer th, footer td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Exclude styling for links in the footer */
+/* Style links in the footer */
 footer a {
-    color: inherit;
+    color: black;
     text-decoration: none;
 }
 
-@media screen and (max-width: 600px) {
-    nav a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
+/* Change styles when hovering over links in the footer */
+footer a:hover {
+    color: #555;
+}
 
-    nav select {
-        display: inline-block; /* Display the selects on smaller screens */
-        width: calc(100% - 32px);
-        margin: 10px 0;
-    }
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Exclude styling for links in the dropdown */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Change styles when hovering over links in the dropdown */
+.dropdown-content a:hover {
+    background-color: #ddd;
 }
