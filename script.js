@@ -1,7 +1,8 @@
 // Function to handle the selection change and redirect to the selected page
 function redirectToPage(selectId) {
     // Get the selected option value
-    var selectedValue = document.getElementById(selectId).value;
+    var selectedOption = document.getElementById(selectId);
+    var selectedValue = selectedOption.options[selectedOption.selectedIndex].value;
 
     // Redirect to the selected page
     if (selectedValue) {
