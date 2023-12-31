@@ -4,8 +4,8 @@ function redirectToPage(selectId) {
     var selectedOption = document.getElementById(selectId);
     var selectedValue = selectedOption.options[selectedOption.selectedIndex].value;
 
-    // Redirect to the selected page
-    if (selectedValue) {
+    // If the selected value is a URL, redirect to the selected page
+    if (selectedValue && selectedValue.startsWith("http")) {
         window.location.href = selectedValue;
     }
 }
